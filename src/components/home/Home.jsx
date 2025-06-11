@@ -12,6 +12,10 @@ function Home(){
                  plant-based haircare products and professional styling services for all hair types and all ages.
                 <br />Our products are made to nourish the scalp, support hair growth, and enhance natural texture, 
                 while our styling services are gentle, neat, and tailored to each client’s needs.</p>
+
+                <div className="img1">
+                <h1>1</h1>
+                </div>
         </div>
     )
 }
