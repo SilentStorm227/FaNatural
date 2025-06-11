@@ -7,7 +7,7 @@ function NavBar(){
         <div>
             <nav className="nav">
                 <div className="header">
-                    <Link to='/'>Home</Link>
+                    <Link to='/'>Hair</Link>
                 </div>
             </nav>
         </div>
