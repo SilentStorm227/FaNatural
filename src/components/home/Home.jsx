@@ -1,21 +1,23 @@
 import React from "react";
 import "../style/home.css"
+import img1 from "../images/1.jpeg";
+import img2 from "../images/2.jpeg";
+import img3 from "../images/3.jpeg";
+import img4 from "../images/4.jpeg";
+import img5 from "../images/5.jpeg";
 
 function Home(){
     return(
         <div>
             <div className="toptext">
             <h1>FaNaturals</h1>
-            <h4>Welcome to my online store</h4>
             </div>
-            <p className="paragraph">FNaturals is your trusted destination for healthy, beautiful hair — offering handcrafted,
-                 plant-based haircare products and professional styling services for all hair types and all ages.
-                <br />Our products are made to nourish the scalp, support hair growth, and enhance natural texture, 
-                while our styling services are gentle, neat, and tailored to each client’s needs.</p>
-
-                <div className="img1">
-                <h1>1</h1>
-                </div>
+            
+            <img src={img1}  className="image1"/>
+            <img src={img2}  className="image1"/>
+            <img src={img3}  className="image1"/>
+            <img src={img4}  className="image1"/>
+            <img src={img5}  className="image1"/>
         </div>
     )
 }
