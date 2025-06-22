@@ -8,6 +8,8 @@
     color: #255f03;
 }
 
-.img1{
-    background-image: url(../images/1.jpeg);
+.image1{
+    width: 300px;
+    height: 400px;
+    padding: 20px;
 }
