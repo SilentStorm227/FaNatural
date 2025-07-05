@@ -17,7 +17,7 @@ function Home(){
                 <div className="row">
                     <div className="image-block">
                         <img src={img1}  className="image1"/>
-                        <p>Leave-in Conditioner</p>
+                        <p className="p1">Leave-in Conditioner</p>
                     </div>
                 </div>
 
@@ -25,28 +25,28 @@ function Home(){
                 <div className="row">
                     <div className="image-block">
             <img src={img2}  className="image1"/>
-            <p>Herbal Bloom Cleansing Shampoo</p>
+            <p className="p1"> Herbal Bloom Cleansing Shampoo</p>
                     </div>
                 </div>
 
                 <div className="row">
                     <div className="image-block">
-            <img src={img3}  className="image1"/>
-            <p>Deep and Intensive Hair Conditioner</p>
+            <img src={img3}  className="image2"/>
+            <p className="p2">Deep and Intensive Hair Conditioner</p>
                     </div>
             </div>
 
                 <div className="row">
                     <div className="image-block">
-            <img src={img4}  className="image1"/>
-            <p>GrowThrive Oil</p>
+            <img src={img4}  className="image2"/>
+            <p className="p2">GrowThrive Oil</p>
                     </div>
             </div>
 
                 <div className="row">
                     <div className="image-block">
-            <img src={img5}  className="image1"/>
-            <p>Pre-wash Hair Treatment Oil</p>
+            <img src={img5}  className="image3"/>
+            <p className="p3">Pre-wash Hair Treatment Oil</p>
                     </div>
             </div>
             </div>

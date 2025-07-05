@@ -11,18 +11,42 @@
 .image1{
     width: 300px;
     height: 450px;
+    position: relative;
+    left: 50px;
 }
 
-.my-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3px; /*space between rows*/
+
+.image2{
+    width: 300px;
+    height: 450px;
+    position: relative;
+    left: 1510px;
+    bottom: 1000px;
 }
 
-.image-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.image3{
+    width: 300px;
+    height: 450px;
+    position: relative;
+    left: 50px;
+    bottom: 1000px;
+}
+
+.p1{
+    position: relative;
+    left: 50px;
+}
+
+.p2{
+    position: relative;
+    left: 1510px;
+    bottom: 1000px;
+}
+
+.p3{
+    position: relative;
+    left: 50px;
+    bottom: 1000px;
 }
 
 @media (max-width: 600px){
