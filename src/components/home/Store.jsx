@@ -6,7 +6,7 @@ import img3 from "../images/3.jpeg";
 import img4 from "../images/4.jpeg";
 import img5 from "../images/5.jpeg";
 
-function Home(){
+function Store(){
     return(
         <div>
             <div className="toptext">
@@ -55,4 +55,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default Store;

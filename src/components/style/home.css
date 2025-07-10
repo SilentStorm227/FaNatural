@@ -1,4 +1,4 @@
-.toptext{
+/* .toptext{
     text-align: center;
     font-size: 2em;
     color: #255f03;
@@ -20,7 +20,7 @@
     width: 300px;
     height: 450px;
     position: relative;
-    left: 1510px;
+    left: 1010px;
     bottom: 1000px;
 }
 
@@ -39,7 +39,7 @@
 
 .p2{
     position: relative;
-    left: 1510px;
+    left: 1010px;
     bottom: 1000px;
 }
 
@@ -54,4 +54,4 @@
         flex-direction: column;
         align-items: center;
     }
-}
+} */
