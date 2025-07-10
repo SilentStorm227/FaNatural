@@ -1,8 +1,6 @@
 import React from "react";
 import { Routes, Route, Link } from 'react-router-dom';
 import "../style/navbar.css";
-// import Home from "../home/Home";
-import Store from "../home/Store";
 import cart from "../images/cart.svg";
 
 function NavBar(){
