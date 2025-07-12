@@ -1,4 +1,17 @@
-.slideshow{
-    width: 1500px;
-    height: 900px;
+.toptext{
+    text-align: center;
+    font-size: 2em;
+    color: #255f03;
+}
+
+.card{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.description{
+    text-align: center;
+    color: #255f03;
 }
