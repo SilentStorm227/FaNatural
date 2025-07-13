@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react";
+import pic1 from "../images/pic1.jpeg";
+import pic2 from "../images/pic2.jpeg";
+import "../style/slideshow.css"
 
 const Images = [
-    pic1.jpeg,
-    pic2.jpeg
+    pic1,pic2
 ];
 
 const Slideshow = ()=>{
@@ -18,9 +20,10 @@ const Slideshow = ()=>{
 
     return(
         <div>
-            <img 
+            <img  
+            className="slideshow"
             src = {Images[index]}
-            alt = {'Slide ${index + 1}'} />
+            alt = {`Slide ${index + 1}`} />
         </div>
     )
 };
