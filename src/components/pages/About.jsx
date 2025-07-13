@@ -11,8 +11,10 @@ function About() {
         <div>
             <div className="text">
                 <h1>About</h1>
-            <h3>At FNaturals, we believe every crown deserves intentional care.<br />
-Whether you’re wearing braids, wigs, or your natural hair, we bring holistic beauty services to your doorstep <br />  and provide products that truly support healthy growth.</h3>
+     <p>Welcome to FNature<br />
+Pure Care for Every Hair Type<br /><br />
+FNaturals is your trusted destination for healthy, beautiful hair — offering handcrafted, plant-based haircare products and professional styling services for all hair types and all ages.<br />
+Our products are made to nourish the scalp, support hair growth, and enhance natural texture, while our styling services are gentle, neat, and tailored to each client’s needs.</p>
         </div>
         <div className="container-fluid mt-5">
             <div className="card-body">
