@@ -4,6 +4,7 @@ import NavBar from "./components/header/NavBar";
 import About from "./components/pages/About";
 import Services from "./components/pages/Services";
 import Store from "./components/pages/Store";
+import Appointment from "./components/pages/Appointment";
 
 function App(){
     return(
@@ -16,6 +17,7 @@ function App(){
                  <Route path="/about" element={<About />} /> 
                  <Route path="/services" element={<Services />} /> 
                 <Route path="/store" element={<Store />} />
+                <Route path="/appointment" element={<Appointment />} />
             </Routes>
 
             </Router>
