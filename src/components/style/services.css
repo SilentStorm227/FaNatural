@@ -3,3 +3,48 @@
     font-size: 2em;
     color: #255f03;
 }
+
+.Braids{
+    width: 200px;
+    height: 200px;
+    background-color: #255f03;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.Wig{
+    width: 200px;
+    height: 200px;
+    background-color: #255f03;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Scalpandhair{
+    width: 200px;
+    height: 200px;
+    background-color: #255f03;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Hairproducts{
+    width: 200px;
+    height: 200px;
+    background-color: #255f03;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.texts{
+    font-size: 2em;
+    background-color: #255f03;
+}
