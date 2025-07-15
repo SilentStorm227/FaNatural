@@ -11,8 +11,8 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
             </div>
        <div className="container-fluid mt-5">
                     <div className="card-body">
-                    <div className="Braids"><p className="texts">Braids</p></div>
-                    <div className="Wig"><p className="texts">Wig care</p></div>
+                    <div className="Braids"><p className="texts2">Braids</p></div>
+                    <div className="Wig"><p className="texts2">Wig care</p></div>
                     <div className="Scalpandhair"><p className="texts">Scalp and hair treatment</p></div>
                     <div className="Hairproducts"><p className="texts">Hair products</p></div>
                 </div>

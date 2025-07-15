@@ -10,8 +10,6 @@
     background-color: #255f03;
     border-radius: 10px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 .Wig{
@@ -46,5 +44,11 @@
 
 .texts{
     font-size: 2em;
+    background-color: #255f03;
+}
+
+
+.texts2{
+    font-size: 45px;
     background-color: #255f03;
 }
