@@ -4,3 +4,31 @@
     color: #255f03;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.content input{
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+    width: 300px;
+    border: 5px solid #255f03;
+    border-radius: 10px;
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.end button{
+    height: 50px;
+    width: 300px;
+    border: 5px solid #255f03;
+    border-radius: 10px;
+}
