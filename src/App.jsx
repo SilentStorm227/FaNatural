@@ -6,6 +6,7 @@ import Services from "./components/pages/Services";
 import Store from "./components/pages/Store";
 import Appointment from "./components/pages/Appointment";
 import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
 
 function App(){
     return(
@@ -20,6 +21,7 @@ function App(){
                 <Route path="/store" element={<Store />} />
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
 
             </Router>
