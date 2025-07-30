@@ -7,6 +7,7 @@ import Store from "./components/pages/Store";
 import Appointment from "./components/pages/Appointment";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
+import Braids from "./components/pages/Braids";
 
 function App(){
     return(
@@ -22,6 +23,7 @@ function App(){
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/braids" element={<Braids />} />
             </Routes>
 
             </Router>
