@@ -1,5 +1,11 @@
-import React from "react";
+import { BrowserRouter as Router,Routes,Route, Link } from "react-router-dom";
 import "../style/services.css"
+
+import Braids from "./Braids";
+import Wigcare from "./Wigcare";
+import Treatment from "./Treatment";
+import Products from "./Products";
+
 
 function Services() {
     return(
@@ -11,7 +17,9 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
             </div>
        <div className="container-fluid mt-5">
                     <div className="card-body">
+                        <Link to={Braids}>
                     <div className="Braids"><p className="texts2">Braids</p></div>
+                    </Link>
                     <div className="Wig"><p className="texts2">Wig care</p></div>
                     <div className="Scalpandhair"><p className="texts">Scalp and hair treatment</p></div>
                     <div className="Hairproducts"><p className="texts">Hair products</p></div>

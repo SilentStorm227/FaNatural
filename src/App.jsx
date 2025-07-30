@@ -8,6 +8,9 @@ import Appointment from "./components/pages/Appointment";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import Braids from "./components/pages/Braids";
+import Wigcare from "./components/pages/Wigcare";
+import Treatment from "./components/pages/Treatment";
+import Products from "./components/pages/Products";
 
 function App(){
     return(
@@ -24,6 +27,9 @@ function App(){
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/braids" element={<Braids />} />
+                <Route path="/wigcare" element={<Wigcare />} />
+                <Route path="/Scalp-and-hair-treatment" element={<Treatment />} />
+                <Route path="/products" element={<Products />} />
             </Routes>
 
             </Router>
