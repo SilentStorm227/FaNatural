@@ -1,10 +1,10 @@
 import React from "react";
 import "../style/about.css"
-import pic1 from "../images/pic1.jpeg";
-import pic3 from "../images/pic1.jpeg";
-import pic4 from "../images/pic2.jpeg";
-import pic5 from "../images/pic2.jpeg";
-import pic2 from "../images/pic2.jpeg";
+import pic1 from "../images/pic6.jpeg";
+import pic3 from "../images/pic5.jpeg";
+import pic4 from "../images/pic9.jpeg";
+import pic5 from "../images/pic16.jpg";
+import pic2 from "../images/pic12.jpeg";
 
 function About() {
     return(

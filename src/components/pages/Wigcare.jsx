@@ -4,7 +4,8 @@ function Wigcare(){
     return(
         <div>
             <div className="top">
-                <h1>Braids</h1>
+                <h1>Wig care</h1>
+                <p>We revive, refresh, and protect your wigs with care rooted in natural values.</p>
             </div>
         </div>
     )
