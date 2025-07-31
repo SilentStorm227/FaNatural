@@ -14,7 +14,11 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
                         <Link to="./braids" className="Braids">
                     <p className="texts2">Braids</p>
                     </Link>
-                    <div className="Wig"><p className="texts2">Wig care</p></div>
+
+                        <Link to="./wigcare" className="Wig">
+                    <p className="texts2">Wig care</p>
+                    </Link>
+
                     <div className="Scalpandhair"><p className="texts">Scalp and hair treatment</p></div>
                     <div className="Hairproducts"><p className="texts">Hair products</p></div>
                 </div>
