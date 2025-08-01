@@ -23,7 +23,6 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
                     <p className="texts2">Scalp and hair treatment</p>
                     </Link>
 
-                    <div className="Scalpandhair"><p className="texts">Scalp and hair treatment</p></div>
                     <div className="Hairproducts"><p className="texts">Hair products</p></div>
                 </div>
             </div>
