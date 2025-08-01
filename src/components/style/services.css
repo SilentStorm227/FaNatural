@@ -51,6 +51,7 @@
 .texts2{
     font-size: 40px;
     background-color: #255f03;
-    position: relative;
-    bottom: 10px;
+    border-radius: 7px;
+    height: 200px;
+    width: 230px;
 }
