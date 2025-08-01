@@ -12,19 +12,19 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
        <div className="container-fluid mt-5">
                     <div className="card-body">
                         <Link to="./braids" className="Braids">
-                    <p className="texts2">Braids</p>
+                    <button className="texts2">Braids</button>
                     </Link>
 
                         <Link to="./wigcare" className="Wig">
-                    <p className="texts2">Wig care</p>
+                    <button className="texts2">Wig <br />care</button>
                     </Link>
 
                         <Link to="./Scalp-and-hair-treatment" className="Scalpandhair">
-                    <p className="texts2">Scalp and hair treatment</p>
+                    <button className="texts2">Scalp and hair treatment</button>
                     </Link>
 
                         <Link to="./products" className="Hairproducts">
-                    <p className="texts">Hair products</p>
+                    <button className="texts2">Hair <br />products</button>
                     </Link>
                 </div>
             </div>

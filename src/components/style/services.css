@@ -3,7 +3,7 @@
     font-size: 2em;
     color: #255f03;
 }
-
+/* 
 .Braids{
     width: 200px;
     height: 200px;
@@ -34,7 +34,7 @@
     background-color: #255f03;
     border-radius: 10px;
     text-align: center;
-}
+} */
 
 .card-body{
     display: flex;
@@ -42,13 +42,15 @@
     padding-top: 50px;
 }
 
-.texts{
-    font-size: 2em;
+/* .texts{
+    font-size: 30px;
     background-color: #255f03;
-}
+} */
 
 
 .texts2{
-    font-size: 45px;
+    font-size: 40px;
     background-color: #255f03;
+    position: relative;
+    bottom: 10px;
 }
