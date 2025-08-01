@@ -1,21 +1,20 @@
+ *{
+    font-size: 20px;
+ }
+
  .cart{
     width: 40px;
     height: 40px;
     position: relative;
-    left: 1120px;
-    top: 10px;
-}
-/*
-.signup{
-    position: relative;
-    left: 1030px;
+    left: 600px;
+    top: 20px;
 }
 
-
-.login{
-    position: relative;
-    left: 1050px;
-} */
+.b1{
+    width: 160px;
+    height: 40px;
+    background-color: #255f03;
+}
 
 .left{
     padding: 20px;
@@ -25,6 +24,6 @@
     width: 40px;
     height: 40px;
     position: relative;
-    left: 1100px;
+    left: 550px;
     padding-left: 25px;
 }
