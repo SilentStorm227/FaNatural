@@ -1,9 +1,9 @@
 import React from "react";
 import "../style/treatment.css"
-import p1 from "../images/pic8.jpeg"
-import p2 from "../images/pic9.jpeg"
-import p3 from "../images/pic10.jpeg"
-import p4 from "../images/pic13.jpeg"
+import p1 from "../images/pic13.jpeg"
+import p2 from "../images/T1.webp"
+import p3 from "../images/T2.webp"
+import p4 from "../images/pic16.jpg"
 
 function Treatment(){
     return(
