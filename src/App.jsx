@@ -28,7 +28,7 @@ function App(){
                 <Route path="/login" element={<Login />} />
                 <Route path="/services/braids" element={<Braids />} />
                 <Route path="/services/wigcare" element={<Wigcare />} />
-                <Route path="/Scalp-and-hair-treatment" element={<Treatment />} />
+                <Route path="/services/Scalp-and-hair-treatment" element={<Treatment />} />
                 <Route path="/products" element={<Products />} />
             </Routes>
 
