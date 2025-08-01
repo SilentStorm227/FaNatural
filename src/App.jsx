@@ -29,7 +29,7 @@ function App(){
                 <Route path="/services/braids" element={<Braids />} />
                 <Route path="/services/wigcare" element={<Wigcare />} />
                 <Route path="/services/Scalp-and-hair-treatment" element={<Treatment />} />
-                <Route path="/products" element={<Products />} />
+                <Route path="/services/products" element={<Products />} />
             </Routes>
 
             </Router>

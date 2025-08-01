@@ -24,6 +24,9 @@ Whether you’re wearing braids, wigs, or your natural hair, we bring holistic b
                     </Link>
 
                     <div className="Hairproducts"><p className="texts">Hair products</p></div>
+                        <Link to="./products" className="Hairproducts">
+                    <p className="texts">Hair products</p>
+                    </Link>
                 </div>
             </div>
         </div>
