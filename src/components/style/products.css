@@ -1,4 +1,13 @@
-.box2{
-    display: flex;
-    justify-content: space-evenly;
+.top1{
+    color: #255f03;
+}
+
+.ttext{
+    text-align: center;
+    width: 100px;
+    height: 80px;
+    font-size: 20px;
+    /* color: #255f03; */
+    border-radius: 10px;
+    background-color: #255f03;
 }
