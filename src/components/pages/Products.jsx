@@ -1,7 +1,8 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "../style/products.css"
+import Store from "./Store";
 
-function Wigcare(){
+function Products(){
     return(
         <div>
             <div className="top">
@@ -18,10 +19,13 @@ function Wigcare(){
                 <li>Ayurvedic Hair Growth Oil</li>
                 </ul>
             </div>
-            <h1>Images Available at store</h1>
-            <button>Store</button>
+            <h1 className="top">Images Available at store</h1>
+                        
+                        <Link to="/store" className="button">
+                            <button className="ttext">Store</button>
+                    </Link>
         </div>
     )
 }
 
-export default Wigcare;
+export default Products;
