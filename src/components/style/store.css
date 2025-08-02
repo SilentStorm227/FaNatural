@@ -21,7 +21,7 @@
     height: 450px;
     position: relative;
     left: 900px;
-    bottom: 1060px;
+    bottom: 1058px;
 }
 
 .image3{
@@ -35,18 +35,21 @@
 .p1{
     position: relative;
     left: 50px;
+    color: #255f03;
 }
 
 .p2{
     position: relative;
     left: 900px;
-    bottom: 1000px;
+    bottom: 1050px;
+    color: #255f03;
 }
 
 .p3{
     position: relative;
     left: 1500px;
     bottom: 1770px;
+    color: #255f03;
 }
 
 @media (max-width: 600px){
