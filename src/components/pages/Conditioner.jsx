@@ -5,7 +5,7 @@ import I1 from "../images/1.jpeg"
 function Conditioner(){
     return(
         <div>
-            <div className="text1">
+            <div className="textt1">
                 <h1>Leave in conditiner.</h1>
             </div>
             <div className="img1">
