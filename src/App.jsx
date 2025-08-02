@@ -11,6 +11,7 @@ import Braids from "./components/pages/Braids";
 import Wigcare from "./components/pages/Wigcare";
 import Treatment from "./components/pages/Treatment";
 import Products from "./components/pages/Products";
+import Conditioner from "./components/pages/Conditioner";
 
 function App(){
     return(
@@ -30,6 +31,7 @@ function App(){
                 <Route path="/services/wigcare" element={<Wigcare />} />
                 <Route path="/services/Scalp-and-hair-treatment" element={<Treatment />} />
                 <Route path="/services/products" element={<Products />} />
+                <Route path="/Leave-in-conditioner" element={<Conditioner />} />
             </Routes>
 
             </Router>
