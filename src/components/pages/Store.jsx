@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "../style/store.css"
 import img1 from "../images/1.jpeg";
 import img2 from "../images/2.jpeg";
@@ -16,7 +16,9 @@ function Store(){
             <div className="my-container">
                 <div className="row">
                     <div className="image-block">
+                        <Link to="/Leave-in-conditioner">
                         <img src={img1}  className="image1"/>
+                        </Link>
                         <p className="p1">Leave-in Conditioner</p>
                     </div>
                 </div>
