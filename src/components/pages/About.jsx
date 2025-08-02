@@ -11,7 +11,7 @@ function About() {
         <div>
             <div className="text">
                 <h1>About</h1>
-     <p>Welcome to FNature<br />
+     <p>Welcome to FNatural.<br />
 Pure Care for Every Hair Type<br /><br />
 FNaturals is your trusted destination for healthy, beautiful hair — offering handcrafted, plant-based haircare products and professional styling services for all hair types and all ages.<br />
 Our products are made to nourish the scalp, support hair growth, and enhance natural texture, while our styling services are gentle, neat, and tailored to each client’s needs.</p>
