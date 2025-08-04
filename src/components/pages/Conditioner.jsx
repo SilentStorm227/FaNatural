@@ -11,19 +11,19 @@ function Conditioner(){
             </div>
             <div className="img1">
             <img src={I1} />
-            <div className="number">
-            </div>
-
-            <div className="number">
-            </div>
-
-            <div className="number">
-            </div>
-
             </div>
             <button className="cart1">
                 Add to cart
                 </button>
+            <div className="number">
+            </div>
+
+            <div className="number">
+            </div>
+
+            <div className="number">
+            </div>
+
         </div>
     )
 }
