@@ -28,5 +28,26 @@
     height: 30px;
     background-color: #255f03;
     position: relative;
-    left: 270px;
+    left: 400px;
+    bottom: 200px;
+}
+
+
+.number2{
+    width: 20px;
+    height: 30px;
+    background-color: #255f03;
+    position: relative;
+    left: 400px;
+    bottom: 200px;
+}
+
+
+.number3{
+    width: 20px;
+    height: 30px;
+    background-color: #255f03;
+    position: relative;
+    left: 400px;
+    bottom: 200px;
 }
