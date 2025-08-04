@@ -24,7 +24,7 @@
 }
 
 .number{
-    width: 20px;
+    width: 40px;
     height: 30px;
     background-color: #255f03;
     position: relative;
@@ -34,20 +34,20 @@
 
 
 .number2{
-    width: 20px;
+    width: 40px;
     height: 30px;
     background-color: #255f03;
     position: relative;
-    left: 400px;
+    left: 450px;
     bottom: 200px;
 }
 
 
 .number3{
-    width: 20px;
+    width: 40px;
     height: 30px;
     background-color: #255f03;
     position: relative;
-    left: 400px;
+    left: 600px;
     bottom: 200px;
 }
