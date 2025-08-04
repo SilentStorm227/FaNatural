@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/conditioner.css"
 import I1 from "../images/1.jpeg"
+import cart from "../images/addtocart.svg"
 
 function Conditioner(){
     return(
@@ -11,6 +12,10 @@ function Conditioner(){
             <div className="img1">
             <img src={I1} />
             </div>
+            <button className="cart">
+                <img className="cartimg" src={cart} />
+                Add to cart
+                </button>
         </div>
     )
 }
