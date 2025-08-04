@@ -9,9 +9,24 @@
     text-align: center;
 }
 
-.cart{
+.cart1{
     width: 230px;
     height: 70px;
-    color: #255f03;
     font-size: 30px;
+    background-color: #255f03;
+    position: relative;
+    left: 500px;
+    border-radius: 7px;
+}
+
+.cart1:hover{
+    background-color: #469717;
+}
+
+.number{
+    width: 20px;
+    height: 30px;
+    background-color: #255f03;
+    position: relative;
+    left: 270px;
 }
