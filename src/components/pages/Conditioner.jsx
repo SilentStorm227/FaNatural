@@ -13,8 +13,8 @@ function Conditioner(){
             <img src={I1} />
             </div>
             <button className="cart">
-                <img className="cartimg" src={cart} />
                 Add to cart
+                <img className="cartimg" src={cart} />
                 </button>
         </div>
     )
