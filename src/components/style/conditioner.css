@@ -10,12 +10,8 @@
 }
 
 .cart{
-    width: 170px;
+    width: 230px;
     height: 70px;
     color: #255f03;
-}
-
-.cartimg{
-    width: 40px;
-    height: 40px;
+    font-size: 30px;
 }
