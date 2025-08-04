@@ -18,10 +18,10 @@ function Conditioner(){
             <div className="number">
             </div>
 
-            <div className="number">
+            <div className="number2">
             </div>
 
-            <div className="number">
+            <div className="number3">
             </div>
 
         </div>
