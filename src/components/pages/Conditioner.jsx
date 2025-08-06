@@ -16,12 +16,15 @@ function Conditioner(){
                 Add to cart
                 </button>
             <div className="number">
+                <h4>-</h4>
             </div>
 
             <div className="number2">
+                {/* <h4>0</h4> */}
             </div>
 
             <div className="number3">
+                {/* <h4>+</h4> */}
             </div>
 
         </div>

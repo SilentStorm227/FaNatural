@@ -30,6 +30,7 @@
     position: relative;
     left: 400px;
     bottom: 130px;
+    font-size: 10px;
 }
 
 
@@ -40,6 +41,8 @@
     position: relative;
     left: 440px;
     bottom: 160px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 
@@ -48,6 +51,7 @@
     height: 30px;
     background-color: #255f03;
     position: relative;
-    left: 500px;
+    left: 480px;
     bottom: 190px;
+    border-left: 2px solid black;
 }
