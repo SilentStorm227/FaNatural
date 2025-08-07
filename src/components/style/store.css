@@ -8,53 +8,7 @@
     color: #255f03;
 }
 
-/* .image1{
-    width: 300px;
-    height: 450px;
-    position: relative;
-    left: 50px;
+img{
+    width: 100px;
+    height: 50px;
 }
-
-
-.image2{
-    width: 300px;
-    height: 450px;
-    position: relative;
-    left: 700px;
-    bottom: 1058px;
-}
-
-.image3{
-    width: 300px;
-    height: 450px;
-    position: relative;
-    left: 1500px;
-    bottom: 1770px;
-}
-
-.p1{
-    position: relative;
-    left: 50px;
-    color: #255f03;
-}
-
-.p2{
-    position: relative;
-    left: 900px;
-    bottom: 1050px;
-    color: #255f03;
-}
-
-.p3{
-    position: relative;
-    left: 1500px;
-    bottom: 1770px;
-    color: #255f03;
-}
-
-@media (max-width: 600px){
-    .row{
-        flex-direction: column;
-        align-items: center;
-    }
-} */
