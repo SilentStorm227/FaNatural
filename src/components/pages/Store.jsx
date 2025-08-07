@@ -15,7 +15,7 @@ function Store(){
             
             <div className="container-fluid mt-5">
                 <div className="card-body">
-
+                    <div className="images">
                         <Link to="/Leave-in-conditioner">
                         <img src={img1}  className="image1"/>
                         </Link>
@@ -28,15 +28,15 @@ function Store(){
 
             <img src={img5}  className="image3"/>
 
+                    </div>
+                </div>
+            </div>
 
                         <p className="p1">Leave-in Conditioner</p>
             <p className="p1"> Herbal Bloom Cleansing Shampoo</p>
             <p className="p2">Deep and Intensive Hair Conditioner</p>
             <p className="p2">GrowThrive Oil</p>
             <p className="p3">Pre-wash Hair Treatment Oil</p>
-
-                </div>
-            </div>
 
         </div>
     )

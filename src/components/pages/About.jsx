@@ -18,11 +18,13 @@ Our products are made to nourish the scalp, support hair growth, and enhance nat
         </div>
         <div className="container-fluid mt-5">
             <div className="card-body">
+                <div className="img">
                 <img src={pic1} />
                 <img src={pic2} />
                 <img src={pic3} />
                 <img src={pic4} />
                 <img src={pic5} />
+                </div>
             </div>
         </div>
             </div>
