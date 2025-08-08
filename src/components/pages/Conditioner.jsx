@@ -1,7 +1,7 @@
 import React from "react";
-import "../style/conditioner.css"
-import I1 from "../images/1.jpeg"
-import cart from "../images/addtocart.svg"
+import "../style/conditioner.css";
+import I1 from "../images/1.jpeg";
+import minus from "../images/minus.svg";
 
 function Conditioner(){
     return(
@@ -16,8 +16,8 @@ function Conditioner(){
                 Add to cart
                 </button>
 
-            <button className="cart1">
-                -hjj
+            <button>
+                <img src={minus} className="decrease" />
                 </button>
 
             <div className="number2">
