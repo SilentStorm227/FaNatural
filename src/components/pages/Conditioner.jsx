@@ -2,6 +2,7 @@ import React from "react";
 import "../style/conditioner.css";
 import I1 from "../images/1.jpeg";
 import minus from "../images/minus.svg";
+import plus from "../images/plus.svg"
 
 function Conditioner(){
     return(
@@ -20,13 +21,13 @@ function Conditioner(){
                 <img src={minus} className="decrease" />
                 </button>
 
-            <div className="number2">
-                {/* <h4>0</h4> */}
-            </div>
+            <button className="number">
+                0
+                </button>
 
-            <div className="number3">
-                {/* <h4>+</h4> */}
-            </div>
+            <button>
+                <img src={plus} className="increase" />
+                </button>
 
         </div>
     )

@@ -32,24 +32,23 @@
     bottom: 110px;
 }
 
-.number2{
-    width: 40px;
+.increase{
+    width: 30px;
     height: 30px;
+    background-color: #255f03;
+    position: relative;
+    left: 150px;
+    bottom: 110px;
+}
+
+.number{
+    width: 40px;
+    height: 50px;
     background-color: #255f03;
     position: relative;
     left: 440px;
     bottom: 160px;
     border-left: 2px solid black;
     border-right: 2px solid black;
-}
-
-
-.number3{
-    width: 40px;
-    height: 30px;
-    background-color: #255f03;
-    position: relative;
-    left: 480px;
-    bottom: 190px;
-    border-left: 2px solid black;
+    font-size: 2em;
 }
