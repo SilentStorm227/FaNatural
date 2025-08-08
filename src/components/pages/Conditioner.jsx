@@ -16,7 +16,7 @@ function Conditioner(){
                 Add to cart
                 </button>
             <div className="number">
-                <h4>-</h4>
+                <h4 className="decrease">-</h4>
             </div>
 
             <div className="number2">
