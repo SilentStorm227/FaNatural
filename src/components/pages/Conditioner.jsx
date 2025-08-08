@@ -15,9 +15,10 @@ function Conditioner(){
             <button className="cart1">
                 Add to cart
                 </button>
-            <div className="number">
-                <h4 className="decrease">-</h4>
-            </div>
+
+            <button className="cart1">
+                -hjj
+                </button>
 
             <div className="number2">
                 {/* <h4>0</h4> */}
