@@ -24,13 +24,12 @@
 }
 
 .decrease{
-    width: 90px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
     background-color: #255f03;
     position: relative;
-    left: 400px;
+    left: 100px;
     bottom: 110px;
-    font-size: 40px;
 }
 
 .number2{
