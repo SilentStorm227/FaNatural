@@ -34,13 +34,13 @@ function Store(){
 </div>
 
             <div className="images4">
-            <p className="p2">GrowThrive Oil</p>
             <img src={img4}  className="image2"/>
+            <p className="p2">GrowThrive Oil</p>
             </div>
-            <div className="images4">
 
-            <p className="p3">Pre-wash Hair Treatment Oil</p>
+            <div className="images5">
             <img src={img5}  className="image3"/>
+            <p className="p3">Pre-wash Hair Treatment Oil</p>
             </div>
 
                 </div>

@@ -23,16 +23,15 @@
     background-color: #469717;
 }
 
-.number{
+.decrease{
     width: 40px;
     height: 30px;
     background-color: #255f03;
     position: relative;
     left: 400px;
-    bottom: 130px;
-    font-size: 10px;
+    bottom: 110px;
+    font-size: 30px;
 }
-
 
 .number2{
     width: 40px;
