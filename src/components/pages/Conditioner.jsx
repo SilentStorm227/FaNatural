@@ -16,13 +16,13 @@ function Conditioner(){
                 Add to cart
                 </button>
 
-            <button>
+            <button className="decrease">
                 <img src={minus} className="decrease" />
                 </button>
 
                 <input className="number" defaultValue={0}/>
 
-            <button>
+            <button className="increase">
                 <img src={plus} className="increase" />
                 </button>
 
