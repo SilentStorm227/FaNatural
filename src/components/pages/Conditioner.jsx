@@ -10,14 +10,13 @@ function Conditioner(){
             <div className="textt1">
                 <h1>Leave in conditiner.</h1>
             </div>
-            <span className="paragraph">
-            <h1> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />Aliquid rerum aspernatur quis mollitia quasi eaque expedita, <br />quam at sequi aliquam consectetur, voluptatem impedit sapiente ex <br />labore. Dolorem reiciendis saepe consequuntur?</h1>
-            </span>
 
+            <h1> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />Aliquid rerum aspernatur quis mollitia quasi eaque expedita, <br />quam at sequi aliquam consectetur, voluptatem impedit sapiente ex <br />labore. Dolorem reiciendis saepe consequuntur?
             <div className="img1">
-            <img src={I1} />
+            <img className="img" src={I1} />
             </div>
-            <button className="cart1">
+            </h1>
+            {/* <button className="cart1">
                 Add to cart
                 </button>
 
@@ -31,7 +30,7 @@ function Conditioner(){
 
             <button>
                 <img src={plus} className="increase" />
-                </button>
+                </button> */}
 
         </div>
     )
