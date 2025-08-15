@@ -64,3 +64,10 @@
     border-right: 2px solid black;
     font-size: 2em;
 }
+
+.paragraph{
+    font-size: 10px;
+    position: relative;
+    left: 600px;
+    top: 500px;
+}
