@@ -1,6 +1,10 @@
 .img{
     float: left;
 }
+
+p{
+    font-size: 30px;
+}
 .textt1{
     color: #255f03;
     font-size: 2rem;
@@ -27,14 +31,13 @@
     background-color: #255f03;
     position: relative;
     left: 100px;
-    bottom: 105px;
+    bottom: 90px;
     border-radius: 1px;
     border-bottom: 2px solid black;
     border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 2px solid black;
 }
-
 .increase{
     width: 30px;
     height: 34px;
@@ -65,7 +68,7 @@
 
 .paragraph{
     font-size: 10px;
-    /* position: relative;
+    position: relative;
     left: 600px;
-    top: 500px; */
+    top: 500px;
 }
