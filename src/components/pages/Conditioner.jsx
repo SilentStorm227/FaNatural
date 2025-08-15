@@ -11,12 +11,8 @@ function Conditioner(){
                 <h1>Leave in conditiner.</h1>
             </div>
 
-            <h1> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />Aliquid rerum aspernatur quis mollitia quasi eaque expedita, <br />quam at sequi aliquam consectetur, voluptatem impedit sapiente ex <br />labore. Dolorem reiciendis saepe consequuntur?
-            <div className="img1">
-            <img className="img" src={I1} />
-            </div>
-            </h1>
-            {/* <button className="cart1">
+            <p><img className="img" src={I1} /> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />Aliquid rerum aspernatur quis mollitia quasi eaque expedita, <br />quam at sequi aliquam consectetur, voluptatem impedit sapiente ex <br />labore. Dolorem reiciendis saepe consequuntur? </p>
+             <button className="cart1">
                 Add to cart
                 </button>
 
@@ -24,13 +20,11 @@ function Conditioner(){
                 <img src={minus} className="decrease" />
                 </button>
 
-            <button className="number">
-                0
-                </button>
+                <input className="number" defaultValue={0}/>
 
             <button>
                 <img src={plus} className="increase" />
-                </button> */}
+                </button>
 
         </div>
     )
