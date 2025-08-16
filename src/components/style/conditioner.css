@@ -26,6 +26,18 @@ p{
     background-color: #469717;
 }
 
+.decrease:hover{
+    background-color: #338105;
+}
+
+.increase:hover{
+    background-color: #338105;
+}
+
+.number:hover{
+    background-color: #338105;
+}
+
 .decrease{
     width: 30px;
     height: 34px;
@@ -42,7 +54,7 @@ p{
     background-color: #255f03;
     position: relative;
     top: 30px;
-    right: 00px;
+    right: 200px;
     border-radius: 1px;
 }
 
@@ -57,4 +69,5 @@ p{
     border-left: 2px solid black;
     border-right: 2px solid black;
     font-size: 2em;
+    text-align: center;
 }
