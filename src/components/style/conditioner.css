@@ -34,39 +34,25 @@ p{
     top: 30px;
     right: 200px;
     border-radius: 1px;
-    /* border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black; */
 }
 
-
-.increase1{
-    width: 50px;
-    height: 55px;
-    background-color: #255f03;
-     position: relative;
-    top: 30px;
-    right: 216px;
-    border-radius: 1px;
-}
 .increase{
     width: 30px;
     height: 34px;
     background-color: #255f03;
-     position: relative;
-    top: 2px;
-    right: 6px;
+    position: relative;
+    top: 30px;
+    right: 00px;
     border-radius: 1px;
 }
 
 .number{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 49px;
     background-color: #255f03;
     position: relative;
-    top: 15px;
-    right: 210px;
+    top: 16px;
+    right: 200px;
     border-radius: 1px;
     border-left: 2px solid black;
     border-right: 2px solid black;
