@@ -20,9 +20,10 @@ function Store(){
                         <p className="p1">Leave-in Conditioner</p>
                         </Link>
 
-
-            <img src={img2}  className="image1"/>
-            <p className="p1"> Herbal Bloom Cleansing Shampoo</p>
+                        <Link to="/Cleansing-shampoo">
+                        <img src={img2}  className="image1"/>
+                        <p className="p1"> Herbal Bloom Cleansing Shampoo</p>
+                        </Link>
 
             <img src={img3}  className="image2"/>
             <p className="p2">Deep and Intensive Hair Conditioner</p>
