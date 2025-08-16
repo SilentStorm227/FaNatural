@@ -12,6 +12,7 @@ import Wigcare from "./components/pages/Wigcare";
 import Treatment from "./components/pages/Treatment";
 import Products from "./components/pages/Products";
 import Conditioner from "./components/pages/Conditioner";
+import Shampoo from "./components/pages/Shampoo";
 
 function App(){
     return(
@@ -32,6 +33,7 @@ function App(){
                 <Route path="/services/Scalp-and-hair-treatment" element={<Treatment />} />
                 <Route path="/services/products" element={<Products />} />
                 <Route path="/Leave-in-conditioner" element={<Conditioner />} />
+                <Route path="/Cleansing-shampoo" element={<Shampoo />} />
             </Routes>
 
             </Router>
