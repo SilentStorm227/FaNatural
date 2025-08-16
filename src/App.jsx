@@ -13,6 +13,7 @@ import Treatment from "./components/pages/Treatment";
 import Products from "./components/pages/Products";
 import Conditioner from "./components/pages/Conditioner";
 import Shampoo from "./components/pages/Shampoo";
+import HairConditioner from "./components/pages/HairConditioner";
 
 function App(){
     return(
@@ -34,6 +35,7 @@ function App(){
                 <Route path="/services/products" element={<Products />} />
                 <Route path="/Leave-in-conditioner" element={<Conditioner />} />
                 <Route path="/Cleansing-shampoo" element={<Shampoo />} />
+                <Route path="/Hair-conditioner" element={<HairConditioner />} />
             </Routes>
 
             </Router>

@@ -1,10 +1,10 @@
 import React from "react";
-import "../style/hairconditioner.css"
-import I1 from "../images/3.jpeg";
+import "../style/prewashoil.css"
+import I1 from "../images/5.jpeg";
 import minus from "../images/minus.svg";
 import plus from "../images/plus.svg"
 
-function HairConditioner(){
+function PrewashOil(){
     return(
         <div>
             <div className="textt1">
@@ -26,4 +26,4 @@ function HairConditioner(){
     )
 }
 
-export default HairConditioner;
+export default PrewashOil;
