@@ -16,10 +16,10 @@ p{
     height: 70px;
     font-size: 30px;
     background-color: #255f03;
-    position: relative;
-    left: 30px;
-    top: 90px;
     border-radius: 7px;
+    position: relative;
+    left: 370px;
+    top: 450px;
 }
 
 .cart1:hover{
@@ -43,8 +43,7 @@ p{
     height: 34px;
     background-color: #255f03;
     position: relative;
-    top: 30px;
-    right: 200px;
+    top: 70px;
     border-radius: 1px;
 }
 
@@ -53,8 +52,7 @@ p{
     height: 34px;
     background-color: #255f03;
     position: relative;
-    top: 30px;
-    right: 200px;
+    top: 70px;
     border-radius: 1px;
 }
 
@@ -63,8 +61,7 @@ p{
     height: 49px;
     background-color: #255f03;
     position: relative;
-    top: 16px;
-    right: 200px;
+    top: 56px;
     border-radius: 1px;
     border-left: 2px solid black;
     border-right: 2px solid black;
