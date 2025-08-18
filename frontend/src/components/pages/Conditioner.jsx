@@ -12,7 +12,7 @@ function Conditioner(){
 
     return(
         <div>
-            <div className="textt1">
+            {/* <div className="textt1">
                 <h1>Leave in conditiner.</h1>
             </div>
             <button className="cart1" onClick={add} >Add to cart</button>        
@@ -23,7 +23,8 @@ function Conditioner(){
 
                 <input className="number" defaultValue={0}/>
 
-                <img src={plus} className="increase" />
+                <img src={plus} className="increase" /> */}
+
 
         </div>
     )

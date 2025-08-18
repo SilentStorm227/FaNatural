@@ -1,0 +1,60 @@
+.cart2{
+    width: 230px;
+    height: 70px;
+    font-size: 30px;
+    background-color: #255f03;
+    border-radius: 7px;
+    position: relative;
+    left: 5px;
+    top: 150px;
+}
+
+.cart2:hover{
+    background-color: #469717;
+}
+
+.decrease2:hover{
+    background-color: #338105;
+}
+
+.increase2:hover{
+    background-color: #338105;
+}
+
+.number2:hover{
+    background-color: #338105;
+}
+
+.decrease2{
+    width: 30px;
+    height: 34px;
+    background-color: #255f03;
+    position: relative;
+    top: 70px;
+    left: -220px;
+    border-radius: 1px;
+}
+
+.increase2{
+    width: 30px;
+    height: 34px;
+    background-color: #255f03;
+    position: relative;
+    top: 70px;
+    right: 220px;
+    border-radius: 1px;
+}
+
+.number2{
+    width: 45px;
+    height: 49px;
+    background-color: #255f03;
+    position: relative;
+    top: 56px;
+    right: 220px;
+    border-radius: 1px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 2em;
+    text-align: center;
+}
