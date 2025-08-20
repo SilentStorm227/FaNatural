@@ -1,0 +1,72 @@
+.img{
+    float: left;
+}
+
+p{
+    font-size: 30px;
+}
+.textt1{
+    color: #255f03;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.cart5{
+    width: 230px;
+    height: 70px;
+    font-size: 30px;
+    background-color: #255f03;
+    border-radius: 7px;
+    position: relative;
+    top: 160px;
+}
+
+.cart5:hover{
+    background-color: #469717;
+}
+
+.decrease5:hover{
+    background-color: #338105;
+}
+
+.increase5:hover{
+    background-color: #338105;
+}
+
+.number5:hover{
+    background-color: #338105;
+}
+
+.decrease5{
+    width: 30px;
+    height: 34px;
+    background-color: #255f03;
+    position: relative;
+    top: 70px;
+    left: -230px;
+    border-radius: 1px;
+}
+
+.increase5{
+    width: 30px;
+    height: 34px;
+    background-color: #255f03;
+    position: relative;
+    top: 70px;
+    left: -230px;
+    border-radius: 1px;
+}
+
+.number5{
+    width: 45px;
+    height: 49px;
+    background-color: #255f03;
+    position: relative;
+    top: 56px;
+    left: -230px;
+    border-radius: 1px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    font-size: 2em;
+    text-align: center;
+}
