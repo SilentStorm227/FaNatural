@@ -20,11 +20,11 @@ function HairConditioner(){
                 Add to cart
                 </button>
 
-                <img src={minus} className="decrease" />
+                <img src={minus} className="decrease3" />
 
-                <input className="number" defaultValue={0}/>
+                <input className="number3" defaultValue={0}/>
 
-                <img src={plus} className="increase" />
+                <img src={plus} className="increase3" />
 
         </div>
     )
