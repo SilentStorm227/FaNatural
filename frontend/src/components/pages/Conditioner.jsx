@@ -25,6 +25,18 @@ function Conditioner(){
 
                 <img src={plus} className="increase" /> */}
 
+                <div className="">
+                    <h1>Leave in conditioner</h1>
+                </div>
+                <button className="">Add to cart</button>
+                <p>
+                    <img className="" src={I1} />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, <br />veritatis beatae fugit dignissimos non delectus minus voluptatibus autem?<br /> reprehenderit temporibus porro quae consectetur in. Dolore aliquid ullam quo saepe ipsa.
+                </p>
+                <img src={minus} className="decrease" />
+                <input className="number" defaultValue={0} />
+                <img src={plus} className="increase" />
+
 
         </div>
     )
