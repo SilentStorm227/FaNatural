@@ -7,6 +7,7 @@ import Store from "./components/pages/Store";
 import Appointment from "./components/pages/Appointment";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
+import Cartpage from "./components/pages/Cartpage";
 import Braids from "./components/pages/Braids";
 import Wigcare from "./components/pages/Wigcare";
 import Treatment from "./components/pages/Treatment";
@@ -31,6 +32,7 @@ function App(){
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/cart" element={<Cartpage />} />
                 <Route path="/services/braids" element={<Braids />} />
                 <Route path="/services/wigcare" element={<Wigcare />} />
                 <Route path="/services/Scalp-and-hair-treatment" element={<Treatment />} />
