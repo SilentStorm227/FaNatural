@@ -1,7 +1,7 @@
 import React from "react";
 import Cartpage from "./Cartpage";
 
-function Cartitem(item){
+function Cartitem(){
     return(
         <div>
             <Cartitem name="Laptop" price={999} quantity={1} />
@@ -10,3 +10,4 @@ function Cartitem(item){
         </div>
     )
 }
+export default Cartitem;

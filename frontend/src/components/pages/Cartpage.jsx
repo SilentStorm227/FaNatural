@@ -1,6 +1,7 @@
 import React from "react";
+import Cartitem from "./Cartitem";
 
-function Cartpage(){
+function Cartpage(props){
     return(
         <div>
             <div>
