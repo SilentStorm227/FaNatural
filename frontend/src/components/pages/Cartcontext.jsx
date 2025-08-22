@@ -37,5 +37,9 @@ export function CartProvider({children}){
     );
     };
 
-     
+     const removefromCart = (id) => {
+        setCart((prev)=> prev.filter((item) => item.id !== id));
+     };
+
+
 }
