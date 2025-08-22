@@ -41,5 +41,17 @@ export function CartProvider({children}){
         setCart((prev)=> prev.filter((item) => item.id !== id));
      };
 
+       // Make cart + functions available to children
+       return(
+        <Cartcontext.Provider
+        value={{cart, addtocat, increaseQty, decreaseQty, removefromCart}}
+        >
+            {children}
+        </Cartcontext.Provider>
+       );
+    }
 
-}
+    // Custom hook for easier usage (useCart() instead of useContext)
+    export function useCart(){
+        return useContext(CartContext)
+    }
