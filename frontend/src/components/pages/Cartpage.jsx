@@ -1,14 +1,19 @@
 import React from "react";
 import Cartitem from "./Cartitem";
+import {useCart} from "./Cartcontext";
 
 function Cartpage(props){
+    const {cart} = useCart();
     return(
         <div>
             <div>
                 <h1>Welcome to your cart.</h1>
-                <h1>{props.name}</h1>
-            <p>Price:{props.price}</p>
-            <p>Quantity:{props.Quantity}</p>
+                {cart.length === 0 && <p>cart is empty</p>}
+                {cart.map((item)=>{
+                    <div key={item.id}>
+                        <p>{item.name} * {item.qty} - £{item.price}</p>
+                    </div>
+                })}
             </div>
         </div>
     )
