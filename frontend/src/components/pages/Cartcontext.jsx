@@ -15,10 +15,12 @@ export function CartProvider({children}){
             const existing = prev.find((item) => item.id === product._id);
             if (existing){
                         // If yes, increase its quantity
+            alert(`${product.name} increased`);
                 return prev.map((item) =>
                 item.id === product._id ? {...item, qty: item.qty + 1} : item
                 );
             }
+            alert(`${product.name} added to cart`);
                   // If not, add new product with qty = 1
             return [...prev, { ...product, id: product._id, qty:1 }];
         });

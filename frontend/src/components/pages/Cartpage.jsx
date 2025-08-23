@@ -15,13 +15,13 @@ function Cartpage(props){
 
                 {cart.map((item)=>(
                     <div key={item.id}>
-                        <p>{item.name} * {item.qty} - £{item.price * item.qty}</p>
+                        <p>{item.name} <br /> <br />{item.qty} <br /> <br />£{item.price * item.qty}</p>
                     </div>
                 ))}
             </div>
 
             {cart.length > 0 && (
-                <p><Strong>Total:£{cart.reduce((sum, item) => sum + item.price * item.qty, 0)}</Strong></p>
+                <p><strong>Total:£{cart.reduce((sum, item) => sum + item.price * item.qty, 0)}</strong></p>
             )}
         </div>
     )
