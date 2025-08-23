@@ -9,7 +9,7 @@ export function CartProvider({children}){
     const [cart, setCart] = useState([]);
 
       // Function: add a product to the cart
-    const addtocat = (product) =>{
+    const addtocart = (product) =>{
         setCart((prev) =>{
                   // Check if product is already in cart
             const existing = prev.find((item) => item.id === product.id);
@@ -54,7 +54,7 @@ export function CartProvider({children}){
        // Make cart + functions available to children
        return(
         <Cartcontext.Provider
-        value={{cart, addtocat, increaseQty, decreaseQty, removefromCart}}
+        value={{cart, addtocart, increaseQty, decreaseQty, removefromCart}}
         >
             {children}
         </Cartcontext.Provider>
@@ -63,5 +63,5 @@ export function CartProvider({children}){
 
     // Custom hook for easier usage (useCart() instead of useContext)
     export function useCart(){
-        return useContext(CartContext)
+        return useContext(Cartcontext)
     }
