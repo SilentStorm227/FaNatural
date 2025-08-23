@@ -12,27 +12,27 @@ export function CartProvider({children}){
     const addtocart = (product) =>{
         setCart((prev) =>{
                   // Check if product is already in cart
-            const existing = prev.find((item) => item.id === product.id);
+            const existing = prev.find((item) => item.id === product._id);
             if (existing){
                         // If yes, increase its quantity
                 return prev.map((item) =>
-                item.id === product.id ? {...item, qty: item.qty + 1} : item
+                item.id === product._id ? {...item, qty: item.qty + 1} : item
                 );
             }
                   // If not, add new product with qty = 1
-            return [...prev, { ...product, qty:1 }];
+            return [...prev, { ...product, id: product._id, qty:1 }];
         });
     };
 
       // Function: increase product quantity
     const increaseQty = (id) => {
-        setCart((prev)=>
-        prev.map((item>
-            item.id === id ? {...item, qty: item.qty + 1} : item
+    setCart((prev) =>
+        prev.map((item) =>
+            item.id === id ? { ...item, qty: item.qty + 1 } : item
         )
-    )
-        );
-    };
+    );
+};
+
 
       // Function: decrease product quantity
     const decreaseQty = (id) => {
