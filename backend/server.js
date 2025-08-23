@@ -108,4 +108,4 @@ product.get("/HairTreatmentOil", async (req,res)=> {
 
 // ------------------ SERVER START ------------------
 // Start backend on port 5000
-product.listen(500, ()=> console.log("Server running on http://localhost:5000"));
+product.listen(5000, ()=> console.log("Server running on http://localhost:5000"));
