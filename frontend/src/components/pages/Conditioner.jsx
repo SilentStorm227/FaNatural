@@ -40,14 +40,33 @@ function Conditioner(){
 
             {product.map((p)=> (
                 <div key={p._id} className="product">
-                    <div className="details">
                     <p>Price:£{p.price}</p>
                     <p>Amount:{p.amount}</p>
-                    </div>
+                    
+                              {/* If product not yet in cart, show Add button */}
+                    {getQty(p._id) === 0 ? (
+                    <button className="cart1" onClick={() => addtocart({...p, id: p._id })}>Add to cart</button>
+                    ) : (
+                                    // If product is in cart, show quantity controls
+                    <div className="qtycontrols">
+
                     <button className="cart1" onClick={() => addtocart(p)}>Add to cart</button>
-                    <img src={minus} className="decrease" onClick={() => decreaseQty(p)} />
-                    <input className="number" defaultValue={0}/>
-                    <img src={plus} className="increase" onClick={() => increaseQty(p)} />
+                    <img src={minus} className="decrease" onClick={() => decreaseQty(p._id)} />
+
+                    <input className="number" value={getQty(p._id)} onChange={(e) => {
+                        const newQty = parseInt(e.target.value) || 0;
+                        if (newQty > getQty(p._id)) {
+                            increaseQty(p._id);
+                        } else if (newQty < getQty(p._id)){
+                            decreaseQty(p._id);
+                        }
+                    }} />
+
+                    <img src={plus} className="increase" onClick={() => increaseQty(p._id)} />
+
+                    </div>
+                    )}
+
                 </div>
             ))}
 
