@@ -5,9 +5,9 @@
 p{
     font-size: 30px;
 }
-.textt1{
+.text0{
     color: #255f03;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -18,8 +18,8 @@ p{
     background-color: #255f03;
     border-radius: 7px;
     position: relative;
-    left: 370px;
-    top: 450px;
+    left: 0px;
+    top: 20px;
 }
 
 .cart1:hover{
