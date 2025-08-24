@@ -14,6 +14,7 @@ function Conditioner(){
     const {getQty} = useCart(); //cart function
     const [product, setproduct] = useState([]); // state for products from DB
     const [loading, setloading] = useState(true); // loading state
+    const [quantities, setQuantities] = useState({}); // Local state for qty of each product before adding to cart
 
       // Fetch products from backend API
       useEffect(() => {

@@ -27,33 +27,49 @@ export function CartProvider({children}){
     };
 
       // Function: increase product quantity
-    const increaseQty = (id) => {
-    setCart((prev) =>
-        prev.map((item) =>
-            item.id === id ? { ...item, qty: item.qty + 1 } : item
-        )
+    const increaseQty = (id, max) => {
+    setCart((prev) =>{
+      const current = prev[id] || 0;
+      if (current < max){
+        return{ ...prev, [id]: current + 1}
+      }
+      return prev; // do nothing if already at max
+    }
     );
               alert("+1");
 };
 
 
-      // Function: decrease product quantity
+  // Function: decrease number in input
     const decreaseQty = (id) => {
-        setCart((prev)=>
-        prev.map((item)=>
-                    // Only decrease if qty is more than 1
-        item.id === id && item.qty > 1
-        ? {...item, qty: item.qty - 1}
-        :item
-    )
-    );
+        setQuanties((prev) => {
+          const current = prev[id] || 0;
+          if (current > 0){
+            return{ ...prev, [id]: current - 1};
+          }
+          return prev; // do nothing if already at 0
+        });
               alert("-1");
     };
 
-    const getQty = (id) => {
-      const item = cart.find((c) => c.id === id || c._id === id);
-      return item ? item.qty :0;
-    };
+      // Function: handle typing manually in input
+      const inputchange = (id, value, max) => {
+        const num = parseInt(value) || 0;
+            if (num >= 0 && num <= max) {
+          setQuanties((prev) => ({ ...prev, [id]: num}));
+        };
+      }
+
+        // Function: add to cart with selected qty
+        const handleaddtocart = (p) => {
+          const qty = quantites[p._id] || 0;
+          if(qty > 0){
+            addtocart({ ...p, qty});// send product + qty to cart
+            alert(`${qty} ${p.name}(s) added to cart`);
+          }else{
+            alert("please select at least one item before adding to cart");
+          }
+        };
 
       // Function: remove product completely
      const removefromCart = (id) => {
@@ -63,7 +79,7 @@ export function CartProvider({children}){
        // Make cart + functions available to children
        return(
         <Cartcontext.Provider
-        value={{cart, getQty, addtocart, increaseQty, decreaseQty, removefromCart}}
+        value={{cart, inputchange, handleaddtocart, addtocart, increaseQty, decreaseQty, removefromCart}}
         >
             {children}
         </Cartcontext.Provider>
