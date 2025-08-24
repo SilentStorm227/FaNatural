@@ -22,6 +22,12 @@ function Conditioner(){
         .then((res) => res.json())  // convert to JSON
         .then((data) => {
             setproduct(data) // save products in state
+                    // initialize quantities to 0
+            const initQuantities = {};
+            data.forEach((p) =>{
+                initQuantities[p._id] = 0;
+            });
+            setQuantities(initQuantities);
             setloading(false) // turn off loader
         })
         .catch((err) =>{
@@ -29,6 +35,8 @@ function Conditioner(){
             setloading(false);
         });
       }, []);
+
+
 
     return(
         <div>
@@ -44,30 +52,34 @@ function Conditioner(){
                     <p>Price:£{p.price}</p>
                     <p>Amount:{p.amount}</p>
                     
-                              {/* If product not yet in cart, show Add button */}
-                    {getQty(p._id) === 0 ? (
-                    <button className="cart1" onClick={() => addtocart({...p, id: p._id })}>Add to cart</button>
-                    ) : (
-                                    // If product is in cart, show quantity controls
                     <div className="qtycontrols">
 
-                    <button className="cart1" onClick={() => addtocart(p)}>Add to cart</button>
-                    <img src={minus} className="decrease" onClick={() => decreaseQty(p._id)} />
+                    {/* <button className="cart1" onClick={() => addtocart(p)}>Add to cart</button> */}
+                    <img src={minus} className="decrease" onClick={() => updateQty(p._id, quantities[p._id] - 1, p.amount)} />
 
-                    <input className="number" value={getQty(p._id)} onChange={(e) => {
-                        const newQty = parseInt(e.target.value) || 0;
-                        if (newQty > getQty(p._id)) {
-                            increaseQty(p._id);
-                        } else if (newQty < getQty(p._id)){
-                            decreaseQty(p._id);
-                        }
+                    <input className="number"
+                    value={quantities[p._id] || 0}
+                    onChange={(e) => {
+
+                        updateQty(p._id, parseInt(e.target.value) || 0, p.amount)
+
                     }} />
 
-                    <img src={plus} className="increase" onClick={() => increaseQty(p._id)} />
+                    <img src={plus} className="increase" onClick={() => updateQty(p._id, quantities[p.id] + 1, p.amount)} />
 
                     </div>
-                    )}
 
+                    <button className="cart1" onClick={() => {
+                        const qty = quantities[p.id] || 0;
+                        if (qty > 0){
+                            addtocart({ ...p,qty});
+                            alert(`${qty} ${p.name}(s) added to cart`)
+                        }else {
+                         alert("Please select at least 1 item");
+                        }}
+                        }>
+                            
+                            Add to cart</button>
                 </div>
             ))}
 
