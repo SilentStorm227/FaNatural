@@ -33,6 +33,7 @@ export function CartProvider({children}){
             item.id === id ? { ...item, qty: item.qty + 1 } : item
         )
     );
+              alert("+1");
 };
 
 
@@ -46,6 +47,12 @@ export function CartProvider({children}){
         :item
     )
     );
+              alert("-1");
+    };
+
+    const getQty = (id) => {
+      const item = cart.find((c) => c.id === id || c._id === id);
+      return item ? item.qty :0;
     };
 
       // Function: remove product completely
@@ -56,7 +63,7 @@ export function CartProvider({children}){
        // Make cart + functions available to children
        return(
         <Cartcontext.Provider
-        value={{cart, addtocart, increaseQty, decreaseQty, removefromCart}}
+        value={{cart, getQty, addtocart, increaseQty, decreaseQty, removefromCart}}
         >
             {children}
         </Cartcontext.Provider>

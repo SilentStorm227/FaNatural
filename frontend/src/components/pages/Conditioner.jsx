@@ -7,7 +7,11 @@ import plus from "../images/plus.svg"
 
 function Conditioner(){
      
+    const {cart} = useCart(); //cart function
     const {addtocart} = useCart(); //cart function
+    const {increaseQty} = useCart(); //cart function
+    const {decreaseQty} = useCart(); //cart function
+    const {getQty} = useCart(); //cart function
     const [product, setproduct] = useState([]); // state for products from DB
     const [loading, setloading] = useState(true); // loading state
 
@@ -41,9 +45,9 @@ function Conditioner(){
                     <p>Amount:{p.amount}</p>
                     </div>
                     <button className="cart1" onClick={() => addtocart(p)}>Add to cart</button>
-                    <img src={minus} className="decrease" />
+                    <img src={minus} className="decrease" onClick={() => decreaseQty(p)} />
                     <input className="number" defaultValue={0}/>
-                    <img src={plus} className="increase" />
+                    <img src={plus} className="increase" onClick={() => increaseQty(p)} />
                 </div>
             ))}
 
