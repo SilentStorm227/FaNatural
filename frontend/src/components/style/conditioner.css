@@ -43,7 +43,8 @@ p{
     height: 34px;
     background-color: #255f03;
     position: relative;
-    top: 70px;
+    bottom: 30px;
+    right: 230px;
     border-radius: 1px;
 }
 
@@ -52,7 +53,8 @@ p{
     height: 34px;
     background-color: #255f03;
     position: relative;
-    top: 70px;
+    bottom: 30px;
+    right: 230px;
     border-radius: 1px;
 }
 
@@ -61,7 +63,8 @@ p{
     height: 49px;
     background-color: #255f03;
     position: relative;
-    top: 56px;
+    bottom: 44px;
+    right: 230px;
     border-radius: 1px;
     border-left: 2px solid black;
     border-right: 2px solid black;

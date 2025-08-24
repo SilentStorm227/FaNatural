@@ -2,8 +2,8 @@ import {useEffect, useState} from "react";
 import "../style/conditioner.css"
 import {useCart} from "./Cartcontext";
 import I1 from "../images/1.jpeg";
-// import minus from "../images/minus.svg";
-// import plus from "../images/plus.svg"
+import minus from "../images/minus.svg";
+import plus from "../images/plus.svg"
 
 function Conditioner(){
      
@@ -36,17 +36,17 @@ function Conditioner(){
 
             {product.map((p)=> (
                 <div key={p._id} className="product">
+                    <div className="details">
                     <p>Price:£{p.price}</p>
                     <p>Amount:{p.amount}</p>
+                    </div>
                     <button className="cart1" onClick={() => addtocart(p)}>Add to cart</button>
+                    <img src={minus} className="decrease" />
+                    <input className="number" defaultValue={0}/>
+                    <img src={plus} className="increase" />
                 </div>
             ))}
-            {/*
-                <img src={minus} className="decrease2" />
 
-                <input className="number2" defaultValue={0}/>
-
-                <img src={plus} className="increase2" /> */}
 
         </div>
     )
