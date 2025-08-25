@@ -8,7 +8,7 @@ import I1 from "../images/1.jpeg";
 function Conditioner(){
      
     const {cart} = useCart(); //cart function
-    const {handleaddtocart} = useCart(); //cart function
+    const {addtocart} = useCart(); //cart function
     const {increaseQty} = useCart(); //cart function
     const {decreaseQty} = useCart(); //cart function
     const [product, setproduct] = useState([]); // state for products from DB
@@ -22,6 +22,12 @@ function Conditioner(){
         .then((data) => {
             setproduct(data) // save products in state
             setloading(false) // turn off loader
+
+                    // Initialize quantities to 1
+         const initialQualitities = {};
+        data.forEach((p) => {initialQualitities[p._id] = 1 });
+        setQuantities(initialQualitities);
+
         })
         .catch((err) =>{
             console.error('Error  fetching product:', err);
@@ -29,6 +35,11 @@ function Conditioner(){
         });
       }, []);
 
+   // Handle Add to Cart
+    const handleaddtocart = (product) =>{
+      addtocart({ ...product, qty: quantities[product._id]});
+      alert(`${product.name} added to cart`);
+    };
 
 
     return(
@@ -50,17 +61,20 @@ function Conditioner(){
                     
                      <button className="cart1" onClick={() => handleaddtocart(product)}>Add to cart</button> 
 
-                    <button onClick={() => setQuantities(prev =>({
+
+                    <button className="controls" onClick={() => setQuantities(prev =>({
                         ...prev,
                         [product._id]: Math.max(prev[product._id] - 1, 1) 
                     }))}>-</button>                           
 
-                    <input value={quantities[product._id]} readOnly />
+                    <input className="controls" value={quantities[product._id]} readOnly />
 
-                    <button onClick={() => setQuantities(prev =>({
+                    <button className="controls" onClick={() => setQuantities(prev =>({
                         ...prev,
                         [product._id]: Math.min(prev[product._id] + 1, product.amount) 
-                    }))}>-</button>                           
+                    }))}>+</button>                           
+
+
 
                 </div>
             ))}
