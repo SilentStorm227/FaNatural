@@ -20,42 +20,46 @@ export function CartProvider({ children }) {
     });
   };
 
-  // Function: get current qty of a product
-  const getQty = (id) => {
-    const item = cart.find((p) => p.id === id);
-    return item ? item.qty : 0;
+  // // Function: get current qty of a product
+  // const getQty = (id) => {
+  //   const item = cart.find((p) => p.id === id);
+  //   return item ? item.qty : 0;
+  // };
+
+    // Increase quantity for a product (but not more than stock)
+   const increaseQty = (id, max) => {
+   setQuantities((prev) => ({
+    ...prev,
+    [id]: Math.min(prev[id] + 1, max),
+   }));
   };
 
-  // Function: increase qty of a product (up to max)
-  const increaseQty = (id, max) => {
-    setCart((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, qty: item.qty < max ? item.qty + 1 : item.qty }
-          : item
-      )
-    );
-  };
-
-  // Function: decrease qty of a product
+    // Decrease quantity for a product (minimum 1)
   const decreaseQty = (id) => {
-    setCart((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? { ...item, qty: item.qty > 0 ? item.qty - 1 : 0 }
-          : item
-      )
+    setQuantities((prev) => ({
+        ...prev,
+        [id]: Math.max(prev[id] - 1, 1),
+    })
     );
   };
 
-  // Function: remove product completely
-  const removefromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
-  };
+    // Handle Add to Cart
+    const handleaddtocart = (product) =>{
+      addtocart({ ...product, qtytoadd: quantities[product._id]});
+      alert(`${product.name} added to cart`);
+    };
+    const initialQualitities = {};
+    data.forEach((p) => {initialQualitities[p._id] = 1 });
+    setQuantities(initialQualitities);
+
+  // // Function: remove product completely
+  // const removefromCart = (id) => {
+  //   setCart((prev) => prev.filter((item) => item.id !== id));
+  // };
 
   return (
     <Cartcontext.Provider
-      value={{ cart, addtocart, getQty, increaseQty, decreaseQty, removefromCart }}
+      value={{ cart, addtocart, increaseQty, decreaseQty, handleaddtocart }}
     >
       {children}
     </Cartcontext.Provider>
