@@ -27,56 +27,34 @@ p{
     background-color: #469717;
 }
 
-/* .decrease:hover{
-    background-color: #338105;
+.controls:hover{
+    background-color: #469717;
 }
 
-.increase:hover{
-    background-color: #338105;
+.controls2:hover{
+    background-color: #469717;
 }
-
-.number:hover{
-    background-color: #338105;
-}
-
-.decrease{
-    width: 30px;
-    height: 34px;
-    background-color: #255f03;
-    position: relative;
-    bottom: 20px;
-    right: 230px;
-    border-radius: 1px;
-}
-
-.increase{
-    width: 30px;
-    height: 34px;
-    background-color: #255f03;
-    position: relative;
-    bottom: 20px;
-    right: 230px;
-    border-radius: 1px;
-}
-
-.number{
-    width: 45px;
-    height: 49px;
-    background-color: #255f03;
-    position: relative;
-    bottom: 34px;
-    right: 230px;
-    border-radius: 1px;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    font-size: 2em;
-    text-align: center;
-} */
 
 .controls{
     width: 50px;
-    height: 40px;
+    height: 50px;
     position: relative;
-    bottom: 60px;
+    bottom: 25px;
     right: 220px;
+    font-size: 40px;
+    background-color: #255f03;
+    border: 0cm;
+}
+
+.controls2{
+    width: 50px;
+    height: 43px;
+    position: relative;
+    bottom: 29px;
+    right: 220px;
+    font-size: 40px;
+    text-align: center;
+    background-color: #255f03;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
