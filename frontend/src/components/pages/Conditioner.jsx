@@ -39,6 +39,11 @@ function Conditioner(){
     const handleaddtocart = (product) =>{
       addtocart({ ...product, qty: quantities[product._id]});
       alert(`${product.name} added to cart`);
+        // Reset the input quantity to 0 (does not affect cart)
+        setQuantities (prev => ({
+            ...prev,
+        [product._id] : 0
+        }));
     };
 
 
@@ -67,7 +72,7 @@ function Conditioner(){
                         [product._id]: Math.max(prev[product._id] - 1, 1) 
                     }))}>-</button>                           
 
-                    <input className="controls" value={quantities[product._id]} readOnly />
+                    <input className="controls2" value={quantities[product._id]} readOnly />
 
                     <button className="controls" onClick={() => setQuantities(prev =>({
                         ...prev,
