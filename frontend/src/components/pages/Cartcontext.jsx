@@ -12,11 +12,12 @@ export function CartProvider({ children }) {
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product._id);
       if (existing) {
+        const newQty = Math.min(existing.qty + product.qty, product.amount) 
         return prev.map((item) =>
-          item.id === product._id ? { ...item, qty: item.qty + 1 } : item
+          item.id === product._id ? { ...item, qty: newQty } : item
         );
       }
-      return [...prev, { ...product, id: product._id, qty: 1 }];
+      return [...prev, { ...product, id: product._id, qty: product.qty }];
     });
   };
 
@@ -43,15 +44,7 @@ export function CartProvider({ children }) {
     );
   };
 
-    // Handle Add to Cart
-    const handleaddtocart = (product) =>{
-      addtocart({ ...product, qtytoadd: quantities[product._id]});
-      alert(`${product.name} added to cart`);
-    };
-    const initialQualitities = {};
-    data.forEach((p) => {initialQualitities[p._id] = 1 });
-    setQuantities(initialQualitities);
-
+   
   // // Function: remove product completely
   // const removefromCart = (id) => {
   //   setCart((prev) => prev.filter((item) => item.id !== id));
@@ -59,7 +52,7 @@ export function CartProvider({ children }) {
 
   return (
     <Cartcontext.Provider
-      value={{ cart, addtocart, increaseQty, decreaseQty, handleaddtocart }}
+      value={{ cart, addtocart, increaseQty, decreaseQty }}
     >
       {children}
     </Cartcontext.Provider>
