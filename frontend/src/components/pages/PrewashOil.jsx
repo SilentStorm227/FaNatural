@@ -1,29 +1,85 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import "../style/prewashoil.css"
 import I1 from "../images/5.jpeg";
-import minus from "../images/minus.svg";
-import plus from "../images/plus.svg"
+import {useCart} from "./Cartcontext";
 
 function PrewashOil(){
-    const add = ()=>{
-        alert('added')
-    }
+
+    const {addtocart} = useCart(); //cart function
+    const [product, setproduct] = useState([]); // state for products from DB
+    const [loading, setloading] = useState(true); // loading state
+    const [quantities, setQuantities] = useState({}); // Local state for qty of each product before adding to cart
+
+      // Fetch products from backend API
+      useEffect(() => {
+        fetch("http://localhost:5000/HairTreatmentOil") // call your backend
+        .then((res) => res.json())  // convert to JSON
+        .then((data) => {
+            setproduct(data) // save products in state
+            setloading(false) // turn off loader
+
+                    // Initialize quantities to 1
+         const initialQualitities = {};
+        data.forEach((p) => {initialQualitities[p._id] = 1 });
+        setQuantities(initialQualitities);
+
+        })
+        .catch((err) =>{
+            console.error('Error  fetching product:', err);
+            setloading(false);
+        });
+      }, []);
+
+   // Handle Add to Cart
+    const handleaddtocart = (product) =>{
+      addtocart({ ...product, qty: quantities[product._id]});
+      alert(`${product.name} added to cart`);
+        // Reset the input quantity to 0 (does not affect cart)
+        setQuantities (prev => ({
+            ...prev,
+        [product._id] : 0
+        }));
+    };
+
     return(
         <div>
+
+            {/* Show loading message */}
+      {loading && <p>Loading products...</p>}
+
+              {/* Loop through products from DB */}
             <div className="textt1">
                 <h1> Pre-wash Hair Treatment Oil</h1>
             </div>
 
             <p><img className="img" src={I1} /> Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />Aliquid rerum aspernatur quis mollitia quasi eaque expedita, <br />quam at sequi aliquam consectetur, voluptatem impedit sapiente ex <br />labore. Dolorem reiciendis saepe consequuntur? </p>
-             <button className="cart5">
-                Add to cart
-                </button>
 
-                <img src={minus} className="decrease5" />
+            {product.map((product)=> (
+                <div key={product._id} className="product">
 
-                <input className="number5" defaultValue={0}/>
+                    <p>Price:£{product.price}</p>
 
-                <img src={plus} className="increase5" />
+                    <p>Amount:{product.amount}</p>
+                    
+                     <button className="cart1" onClick={() => handleaddtocart(product)}>Add to cart</button> 
+
+
+                    <button className="controls" onClick={() => setQuantities(prev =>({
+                        ...prev,
+                        [product._id]: Math.max(prev[product._id] - 1, 1) 
+                    }))}>-</button>                           
+
+                    <input className="controls2" value={quantities[product._id]} readOnly />
+
+                    <button className="controls" onClick={() => setQuantities(prev =>({
+                        ...prev,
+                        [product._id]: Math.min(prev[product._id] + 1, product.amount) 
+                    }))}>+</button>                           
+
+
+
+                </div>
+            ))}
 
         </div>
     )
