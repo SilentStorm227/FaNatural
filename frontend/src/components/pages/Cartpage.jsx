@@ -1,6 +1,6 @@
 import React from "react";
 import {useCart} from "./Cartcontext";
-import sad from "../images/sadflower.png"
+import sad from "../images/sad.png"
 import "../style/cartpage.css";
 
 function Cartpage(props){
@@ -19,8 +19,15 @@ function Cartpage(props){
 
                 {cart.map((item)=>(
                     <div key={item.id}>
-                        <img src={`/images/${item.image}`} />
-                        <p>{item.name}.   Amount:{item.qty}. Price:{item.price * item.qty}.</p>
+                        
+                        <p> 
+                            <img src={`/images/${item.image}`} />
+                            <div className="cartproduct">
+                             {item.name}.
+                             Amount:{item.qty}.
+                            Price:{item.price * item.qty}.
+                            </div>
+                            </p>
                     </div>
                 ))}
             </div>

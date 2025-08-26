@@ -2,3 +2,13 @@
     text-align: center;
     color: #255f03;
 }
+
+.img{
+    float: left;
+}
+
+.cartproduct{
+    position: relative;
+    bottom: 450px;
+    left: 370px;
+}
