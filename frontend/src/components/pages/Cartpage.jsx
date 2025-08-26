@@ -19,6 +19,7 @@ function Cartpage(props){
 
                 {cart.map((item)=>(
                     <div key={item.id}>
+                        <img src={`/images/${item.image}`} />
                         <p>{item.name}.   Amount:{item.qty}. Price:{item.price * item.qty}.</p>
                     </div>
                 ))}
