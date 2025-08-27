@@ -3,12 +3,22 @@
     color: #255f03;
 }
 
-.img{
+.cartitem img{
     float: left;
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+.cartitem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px;
 }
 
-.cartproduct{
+/* .cartproduct{
     position: relative;
     bottom: 430px;
     left: 370px;
-}
+} */
