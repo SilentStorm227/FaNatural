@@ -20,14 +20,12 @@ function Cartpage(props){
                 {cart.map((item)=>(
                     <div key={item.id}>
                         
-                        <p> 
                             <img src={`/images/${item.image}`} />
                             <div className="cartproduct">
-                             {item.name}.
-                             Amount:{item.qty}.
+                             {item.name}.<br /> <br />
+                             Amount:{item.qty}. <br /> <br />
                             Price:{item.price * item.qty}.
                             </div>
-                            </p>
                     </div>
                 ))}
             </div>
@@ -35,6 +33,8 @@ function Cartpage(props){
             {cart.length > 0 && (
                 <p><strong>Total:£{cart.reduce((sum, item) => sum + item.price * item.qty, 0)}</strong></p>
             )}
+            
+            <button>Checkout</button>
         </div>
     )
 };

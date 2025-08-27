@@ -1,4 +1,5 @@
 import { useContext, createContext, useState } from "react";
+import {loadStripe} from '@stripe/stripe-js';
 
 // Create the Cart context
 const Cartcontext = createContext();
@@ -49,6 +50,10 @@ export function CartProvider({ children }) {
   // const removefromCart = (id) => {
   //   setCart((prev) => prev.filter((item) => item.id !== id));
   // };
+
+  const makepayment = async () => {
+    const stripe = await loadStripe("")
+  }
 
   return (
     <Cartcontext.Provider
