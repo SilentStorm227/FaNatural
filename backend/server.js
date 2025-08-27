@@ -1,6 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
+const cors = require('cors'); 
+const { CurrencySelectorElement } = require('@stripe/react-stripe-js');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+require('dotenv').config()
 // const jsonwebtoken = require('jsonwebtoken');
 // const bcrypt = require('bcrypt');
 
@@ -105,6 +108,34 @@ product.get("/HairTreatmentOil", async (req,res)=> {
         res.status(500).json({message:error.message})
     }
 });
+
+
+
+//-------------------CHECKOUT SESSION--------------------------
+product.post("/create-checkout-session", async(req,res)=>{
+    try {
+        const {product} = req.body;
+        const lineitem = products.map((product)=>({
+           price_data:{
+            Currency:"gdp",
+            product_data:{
+                name:product.name,
+                images:[product.image]
+            },
+            unit_amount:product.price*1000
+           },
+           amount:product.amount
+        }));
+
+        const session = await stripe.checkout.session.create({
+
+        })
+    } catch (error) {
+        
+    }
+})
+
+
 
 // ------------------ SERVER START ------------------
 // Start backend on port 5000
