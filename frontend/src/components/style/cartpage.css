@@ -13,8 +13,8 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 50px 0;
+    padding: 10px;
 }
 
 .checkout{
@@ -27,4 +27,54 @@
 
 .checkout:hover{
     background-color: #469717;
+}
+.controls0:hover{
+    background-color: #469717;
+}
+
+.controls1:hover{
+    background-color: #469717;
+}
+
+.controls0{
+    width: 25px;
+    height: 30px;
+    display: flex;
+    font-size: 25px;
+    background-color: #255f03;
+    color: white;
+    border: 0cm;
+}
+
+.controls01{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    color: white;
+    font-size: 25px;
+    background-color: #255f03;
+    border: 0cm;
+}
+
+.controls1{
+    width: 30px;
+    height: 25px;
+    display: flex;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #255f03;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.stylecontrols{
+    display: flex;
+  align-items: center;     /* vertically center the buttons and input */
+  gap: 5px;  
+}
+
+.bin img{
+    width: 30px;
+    height: 30px;
 }

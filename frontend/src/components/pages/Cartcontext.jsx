@@ -22,12 +22,6 @@ export function CartProvider({ children }) {
     });
   };
 
-  // // Function: get current qty of a product
-  // const getQty = (id) => {
-  //   const item = cart.find((p) => p.id === id);
-  //   return item ? item.qty : 0;
-  // };
-
     // Increase quantity for a product (but not more than stock)
    const increaseQty = (id, max) => {
    setQuantities((prev) => ({
@@ -47,15 +41,15 @@ export function CartProvider({ children }) {
 
    
   // // Function: remove product completely
-  // const removefromCart = (id) => {
-  //   setCart((prev) => prev.filter((item) => item.id !== id));
-  // };
+  const removefromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
 
  
 
   return (
     <Cartcontext.Provider
-      value={{ cart, addtocart, increaseQty, decreaseQty }}
+      value={{ cart, addtocart, increaseQty, decreaseQty, removefromCart }}
     >
       {children}
     </Cartcontext.Provider>
