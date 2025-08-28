@@ -76,6 +76,7 @@ function Cartpage(props){
                         [item.id]: Math.max((prev[item.id] ?? item.qty) - 1, 1) 
                     }))}>-</button>                           
 
+
                     <input className="controls1" value={quantities[item.id] ?? item.qty} readOnly /> {/* default to item.qty readOnly */}
 
                     <button className="controls01" onClick={() => setQuantities(prev =>({
