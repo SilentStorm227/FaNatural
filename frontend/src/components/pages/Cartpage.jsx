@@ -13,6 +13,7 @@ function Cartpage(props){
     const { removefromCart } = useCart();
 
 
+
  const makepayment = async () => {
     const stripe = await loadStripe("pk_test_51S0eJfGc4BhCd61yU6rZKKDEwTZPzvSMPAXpkZjRMvu9535TQ1tnMVmJiofZhzjZ43vEFpEEUrbWKveVSUtaM0Jt00QXJJ2giD")
 
