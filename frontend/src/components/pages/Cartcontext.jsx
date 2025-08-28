@@ -51,34 +51,7 @@ export function CartProvider({ children }) {
   //   setCart((prev) => prev.filter((item) => item.id !== id));
   // };
 
-  const makepayment = async () => {
-    const stripe = await loadStripe("pk_test_51S0eJfGc4BhCd61yU6rZKKDEwTZPzvSMPAXpkZjRMvu9535TQ1tnMVmJiofZhzjZ43vEFpEEUrbWKveVSUtaM0Jt00QXJJ2giD")
-
-    const body = {
-      product: cart
-    }
-
-    const headers = {
-      "Content-type":"application/json"
-    }
-
-    const responce =
-      await fetch(`${apiUrl}/create-checkout-session`,{
-        method:"POST",
-        headers:headers,
-        body:JSON.stringify(body)
-      });
-
-      const session = await responce.json();
-
-      const result = stripe.redirectToCheckout({
-        sessionId:session.id
-      });
-
-      if(result.error){
-        console.log(result.error)
-      }
-  }
+ 
 
   return (
     <Cartcontext.Provider

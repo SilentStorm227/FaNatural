@@ -1,9 +1,10 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors'); 
 const { CurrencySelectorElement } = require('@stripe/react-stripe-js');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-require('dotenv').config()
+const Stripe = require('stripe')
+const stripe = new Stripe (process.env.STRIPE_SECRET_KEY);
 // const jsonwebtoken = require('jsonwebtoken');
 // const bcrypt = require('bcrypt');
 
@@ -115,23 +116,32 @@ product.get("/HairTreatmentOil", async (req,res)=> {
 product.post("/create-checkout-session", async(req,res)=>{
     try {
         const {product} = req.body;
-        const lineitem = products.map((product)=>({
+
+        const lineitem = product.map((product)=>({
            price_data:{
-            Currency:"gdp",
+            currency:"gbp",
             product_data:{
                 name:product.name,
                 images:[product.image]
             },
-            unit_amount:product.price*1000
+            unit_amount:Math.round(product.price*100),
            },
-           amount:product.amount
+           quantity:product.qty,
         }));
 
-        const session = await stripe.checkout.session.create({
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types:["card"],
+            line_items:lineitem,
+            mode:"payment",
+            success_url:"http://localhost:5173/",
+            cancel_url:"http://localhost:5173/about"
+        });
 
-        })
+        res.json({id:session.id})
+
     } catch (error) {
-        
+        console.error(error);
+        res.status(500).json({message:error.message})
     }
 })
 
