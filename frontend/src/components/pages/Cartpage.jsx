@@ -70,6 +70,7 @@ function Cartpage(props){
                             Price:{item.price * item.qty}.
 
                     <div className="stylecontrols">
+
                     <button className="controls0" onClick={() => setQuantities(prev =>({
                         ...prev,
                         [item.id]: Math.max((prev[item.id] ?? item.qty) - 1, 1) 
