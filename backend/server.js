@@ -5,8 +5,8 @@ const cors = require('cors');
 const { CurrencySelectorElement } = require('@stripe/react-stripe-js');
 const Stripe = require('stripe')
 const stripe = new Stripe (process.env.STRIPE_SECRET_KEY);
-// const jsonwebtoken = require('jsonwebtoken');
-// const bcrypt = require('bcrypt');
+const jsonwebtoken = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 const product = express();
 product.use(cors()); // Allow requests from React frontend
@@ -145,6 +145,79 @@ product.post("/create-checkout-session", async(req,res)=>{
     }
 })
 
+//---------------LOGING, SIGN IN AND PROFILE-----------------
+
+const userSchema =  new mongoose.Schema({
+    Name: {type:String, required:true},
+    Email: {type:String, required:true},
+    Password: {type:String, required:true}
+});
+
+userSchema.pre('save', async function(next) {
+    if (!this.isModified('Password')) return next();
+
+    try {
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
+        next();
+    } catch (error) {
+        next(error)
+    };
+});
+
+const user = mongoose.model('user', userSchema);
+
+product.get('/create-account', async(req,res)=>{
+    try {
+        const newuser = new user ({
+            Name:req.body.Name,
+            Email:req.body.Email,
+            Password:req.body.Password,
+        });
+        await newuser.save();
+        res.json(newuser)
+    } catch (error) {
+        res.status(500).json({message:"Error!", error:error.message});
+    }
+});
+
+product.get('login', async(req,res)=>{
+    try {
+        const{Name, Password} = req.body;
+
+        const founduser = await user.findOne({Name});
+
+                //if user not found
+        if(!founduser){
+            res.status(400).json({message:'user not found'})
+        }
+
+                // Compare the provided password with the stored hashed password
+        const ismatch = await bcrypt.compare(Password, founduser.Password)
+
+                //if password is not correct
+        if(!ismatch){
+            res.staus(400).json({message:'invalid password'})
+        }
+
+        const token = jsonwebtoken.sign(
+            {id: founduser._id},
+            "secretkey",
+            {expiresIn:'1h'}
+        )
+
+                // Return it to the user
+        res.status(200).json({message:'login sucess', token});
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({message:'server error'})
+    }
+});
+
+//PROFILE PAGE
+product.get('/profile-page', async(req,res)=>{
+
+})
 
 
 // ------------------ SERVER START ------------------
