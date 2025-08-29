@@ -5,7 +5,7 @@ import "../style/login.css";
 
 const Login = ()=>{
     const [formdata, setformdata] = useState({
-        Username:'',
+        Name:'',
         Password:''
     });
 const handlechange = (e)=>{

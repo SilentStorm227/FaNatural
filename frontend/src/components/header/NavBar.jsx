@@ -36,6 +36,10 @@ function NavBar(){
                     <button className="b1">Login</button>
                     </Link>
 
+                    <Link to='/Profile' className="right">
+                    <button className="b1">Profile</button>
+                    </Link>
+
                     <Link to='/cart'><img src={cart} className="cart"/></Link>
                 </div>
             </nav>
