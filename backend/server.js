@@ -158,7 +158,7 @@ userSchema.pre('save', async function(next) {
 
     try {
         const salt = await bcrypt.genSalt(10);
-        this.password = await bcrypt.hash(this.password, salt);
+        this.Password = await bcrypt.hash(this.Password, salt);
         next();
     } catch (error) {
         next(error)
@@ -217,16 +217,16 @@ product.post('/login', async(req,res)=>{
 //PROFILE PAGE
 product.get('/profile-page', async(req,res)=>{
     try {
-        const token = req.header('Authrization').replace('Bearer ', '');
+        const token = req.header('Authorization').replace('Bearer ', '');
 
         if(!token){
-            res.staus(401).json({message:'no token provided'})
+            res.status(401).json({message:'no token provided'})
         }
 
         const decoded = jsonwebtoken.verify(token, 'secretkey5@497');
         const userId = decoded.id;
 
-        const userprofile = await user.findById(userId, 'Nmae Email')
+        const userprofile = await user.findById(userId, 'Name Email')
         if(!userprofile){
            return res.status(404).json({profile:'user not found'})
         }
