@@ -167,7 +167,7 @@ userSchema.pre('save', async function(next) {
 
 const user = mongoose.model('user', userSchema);
 
-product.get('/create-account', async(req,res)=>{
+product.post('/create-account', async(req,res)=>{
     try {
         const newuser = new user ({
             Name:req.body.Name,
@@ -181,7 +181,7 @@ product.get('/create-account', async(req,res)=>{
     }
 });
 
-product.get('login', async(req,res)=>{
+product.post('login', async(req,res)=>{
     try {
         const{Name, Password} = req.body;
 
@@ -202,7 +202,7 @@ product.get('login', async(req,res)=>{
 
         const token = jsonwebtoken.sign(
             {id: founduser._id},
-            "secretkey",
+            "secretkey5@497",
             {expiresIn:'1h'}
         )
 
@@ -216,7 +216,26 @@ product.get('login', async(req,res)=>{
 
 //PROFILE PAGE
 product.get('/profile-page', async(req,res)=>{
+    try {
+        const token = req.header('Authrization').replace('Bearer ', '');
 
+        if(!token){
+            res.staus(401).json({message:'no token provided'})
+        }
+
+        const decoded = jsonwebtoken.verify(token, 'secretkey5@497');
+        const userId = decoded.id;
+
+        const userprofile = await user.findById(userId, 'Nmae Email')
+        if(!userprofile){
+           return res.status(404).json({profile:'user not found'})
+        }
+
+        res.status(200).json({profile:userprofile})
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({message:'server error'})
+    }
 })
 
 
