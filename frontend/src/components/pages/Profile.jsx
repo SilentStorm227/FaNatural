@@ -44,8 +44,8 @@ const Profile = ()=>{
     return(
         <div>
             <h1 className='ttex1t'>Profile</h1><br /><br />
-            <p><strong>Name:</strong> {profile.Name}</p>
-            <p><strong>Email:</strong> {profile.Email}</p>
+            <p className='thetext' ><strong>Name:</strong> {profile.Name}</p>
+            <p className='thetext'><strong>Email:</strong> {profile.Email}</p>
         </div>
     )
 }
