@@ -13,16 +13,16 @@ const Signup = ()=>{
     const handlechange = (e)=>{
         const {name, value} = e.target
         setformdata({
-            ...FormData,
+            ...formdata,
             [name]: value,
         });
     };
 
     const handlesubmit = async (e)=>{
-        e.preventdefault();
+        e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/create-account', FormData);
+            const response = await axios.post('http://localhost:5000/create-account', formdata);
             alert('Account created sucessfully!!')
         } catch (error) {
             if (error.response) {
@@ -43,13 +43,13 @@ const Signup = ()=>{
             
             <div className="content">
                 <form onSubmit={handlesubmit}>
-                <input type="text" placeholder="Name" value={formdata.Name} onChange={handlechange}/><br /><br />
-                <input type="email" placeholder="Email" value={formdata.Email} onChange={handlechange} /><br /><br />
-                <input type="password" placeholder="Password" value={formdata.Password} onChange={handlechange} /><br /><br />
-                </form>
-            </div>
-            <div className="end">
+                <input type="text" placeholder="Name" name="Name" value={formdata.Name} onChange={handlechange}/><br /><br />
+                <input type="email" placeholder="Email" name="Email" value={formdata.Email} onChange={handlechange} /><br /><br />
+                <input type="password" placeholder="Password" name="Password" value={formdata.Password} onChange={handlechange} /><br /><br />
+    <div className="end">
                 <button>Sign up</button>
+            </div>
+                </form>
             </div>
         </div>
     )
