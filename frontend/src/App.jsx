@@ -17,6 +17,7 @@ import Shampoo from "./components/pages/Shampoo";
 import HairConditioner from "./components/pages/HairConditioner";
 import Oil from "./components/pages/Oil";
 import PrewashOil from "./components/pages/PrewashOil";
+import Proile from "./components/pages/Profile";
 
 
 
@@ -34,6 +35,7 @@ function App(){
                 <Route path="/appointments" element={<Appointment />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/Profile" element={<Proile />} />
                 <Route path="/cart" element={<Cartpage />} />
                 <Route path="/services/braids" element={<Braids />} />
                 <Route path="/services/wigcare" element={<Wigcare />} />

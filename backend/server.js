@@ -181,7 +181,7 @@ product.post('/create-account', async(req,res)=>{
     }
 });
 
-product.post('login', async(req,res)=>{
+product.post('/login', async(req,res)=>{
     try {
         const{Name, Password} = req.body;
 
