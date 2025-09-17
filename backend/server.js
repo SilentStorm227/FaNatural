@@ -7,6 +7,8 @@ const Stripe = require('stripe')
 const stripe = new Stripe (process.env.STRIPE_SECRET_KEY);
 const jsonwebtoken = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+import multer from 'multer';
+import path from 'path';
 
 const product = express();
 product.use(cors()); // Allow requests from React frontend
@@ -52,12 +54,30 @@ const HairTreatmentOilSchema = new mongoose.Schema({
     amount: Number, //product price
 });
 
+   const ProfileSchema = new mongoose.Schema({
+  Name: { type: String, required: true },
+  Email: { type: String, required: true },
+  Password: { type: String, required: true },
+  profilePic: { type: String, default: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmaeruamall.com%2Fabout%2Fperson-placeholder-4%2F&psig=AOvVaw0pOtjv8eS9egL-sX_UmVbM&ust=1758212924057000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCMiuhdyb4I8DFQAAAAAdAAAAABAi' } // store path/URL
+});
+
 // Create a Mongoose model (like a collection in MongoDB)
 const Conditioner = mongoose.model("Conditioner", ConditionerSchema);
 const CleansingShampoo = mongoose.model("CleansingShampoo", CleansingShampooSchem);
 const HairConditioner = mongoose.model("HairConditioner", HairConditionerSchema);
 const GrowThriveOil = mongoose.model("GrowThriveOil", GrowThriveOilSchema);
 const HairTreatmentOil = mongoose.model("HairTreatmentOil", HairTreatmentOilSchema);
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) =>{
+        cb (null, 'uploads/');
+    },
+    filename: (req, file, cb) =>{
+        cb(null, Date.now() + path.extname(file.originalname));
+    },
+});
+
+const upload = multer({storage})
 
 // ------------------ ROUTES ------------------
 
@@ -237,6 +257,32 @@ product.get('/profile-page', async(req,res)=>{
         res.status(500).json({message:'server error'})
     }
 })
+
+// Upload profile picture
+product.post('upload-picture', upload.single('profilePic'), async(req, res)=>{
+    try {
+        const tokenHeader = req.header('Authorization');
+        if (!tokenHeader) return res.status(401).json({message: 'No token provided'});
+
+        const token = tokenHeader.replace('Bearer ', '');
+        const  decoded = jsonwebtoken(token, 'secretkey5');
+
+        const updatedUser = await user.findByIdAndUpdate(
+            decoded.id,
+            {profilePic :req.file.path },
+            {new: true}
+        );
+
+            res.status(200).json({ message: 'Profile picture updated', profile: updatedUser });
+    } catch (error) {
+        console.error(err);
+    res.status(500).json({ message: 'Server error' });
+    }
+})
+
+// serve uploads as static
+app.use('/uploads', express.static('uploads'));
+
 
 
 // ------------------ SERVER START ------------------
