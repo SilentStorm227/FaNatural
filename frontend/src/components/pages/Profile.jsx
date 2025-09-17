@@ -41,6 +41,8 @@ const Profile = ()=>{
                 <div>Loading..............</div>
             )
         }
+
+        
     return(
         <div>
             <h1 className='ttex1t'>Profile</h1><br /><br />
