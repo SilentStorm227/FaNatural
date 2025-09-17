@@ -1,12 +1,12 @@
-require('dotenv').config()
-const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors'); 
-const { CurrencySelectorElement } = require('@stripe/react-stripe-js');
-const Stripe = require('stripe')
-const stripe = new Stripe (process.env.STRIPE_SECRET_KEY);
-const jsonwebtoken = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+import dotenv from 'dotenv'
+dotenv.config()
+
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import Stripe from 'stripe';
+import jsonwebtoken from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 import multer from 'multer';
 import path from 'path';
 
@@ -281,7 +281,7 @@ product.post('upload-picture', upload.single('profilePic'), async(req, res)=>{
 })
 
 // serve uploads as static
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
 
 
 

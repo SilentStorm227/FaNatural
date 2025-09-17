@@ -1,4 +1,6 @@
 {
+"type": "module",
+
   "dependencies": {
     "@stripe/react-stripe-js": "^3.9.2",
     "axios": "^1.11.0",
